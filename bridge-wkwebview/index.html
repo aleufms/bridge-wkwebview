@@ -1,0 +1,36 @@
+<html>
+    <script>
+        function fillValues(value1, value2) {
+            document.getElementById("value1").value=value1;
+            document.getElementById("value2").value=value2;
+        }
+        function submitValues() {
+            var value1 = document.getElementById("value1").value;
+            var value2 = document.getElementById("value2").value;
+            exampleMethod({ value1: value1, value2: value2 });
+
+            return false;
+        }
+        function exampleMethod(msg) {
+            try {
+                if (window.webkit != undefined) {
+                    if (window.webkit.messageHandlers.exampleMethod != undefined) {
+                        window.webkit.messageHandlers.exampleMethod.postMessage(msg);
+                    }
+                }
+                if (window.appInterface != undefined) {
+                    window.exampleMethod.postMessage(msg)
+                }
+            } catch(err) {
+                console.log('Can not reach native code');
+            }
+        }
+    </script>
+    <body>
+        <form onsubmit="return submitValues()">
+            Valor 1: <input type="text" name="value1" id="value1"><br>
+            Valor 2: <input type="text" name="value2" id="value2"><br>
+            <input type="submit" value="OK">
+        </form>
+    </body>
+</html>

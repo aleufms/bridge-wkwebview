@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bridge_wkwebview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5C-wt-dx0">
+                                <rect key="frame" x="144" y="90" width="190" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLn-4e-xRk">
+                                <rect key="frame" x="184" y="190" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Z3q-7M-8At" kind="modal" identifier="calcSegue" id="aLA-oX-ucm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7xV-UG-WOG">
+                                <rect key="frame" x="146" y="140" width="188" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbp-F1-tXO">
+                                <rect key="frame" x="80" y="94.5" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doc-VV-NDv">
+                                <rect key="frame" x="80" y="144.5" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5C-wt-dx0" secondAttribute="trailing" constant="80" id="2SQ-yj-42R"/>
+                            <constraint firstItem="7xV-UG-WOG" firstAttribute="leading" secondItem="Doc-VV-NDv" secondAttribute="trailing" constant="8" id="2gq-la-j4H"/>
+                            <constraint firstItem="Wbp-F1-tXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="IyB-4y-Hw8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7xV-UG-WOG" secondAttribute="trailing" constant="80" id="LbS-Tk-HsT"/>
+                            <constraint firstItem="7xV-UG-WOG" firstAttribute="top" secondItem="b5C-wt-dx0" secondAttribute="bottom" constant="20" id="TXL-fi-FFt"/>
+                            <constraint firstItem="b5C-wt-dx0" firstAttribute="centerY" secondItem="Wbp-F1-tXO" secondAttribute="centerY" id="Uy8-qo-x8W"/>
+                            <constraint firstItem="7xV-UG-WOG" firstAttribute="centerY" secondItem="Doc-VV-NDv" secondAttribute="centerY" id="XRt-IM-aEh"/>
+                            <constraint firstItem="Doc-VV-NDv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="bs5-VJ-lYD"/>
+                            <constraint firstItem="QLn-4e-xRk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gXG-LF-pxP"/>
+                            <constraint firstItem="QLn-4e-xRk" firstAttribute="top" secondItem="7xV-UG-WOG" secondAttribute="bottom" constant="20" id="hKr-or-jRP"/>
+                            <constraint firstItem="b5C-wt-dx0" firstAttribute="leading" secondItem="Wbp-F1-tXO" secondAttribute="trailing" constant="8" id="w8w-Kt-ag5"/>
+                            <constraint firstItem="b5C-wt-dx0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="yar-HQ-IT8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="value1TextField" destination="b5C-wt-dx0" id="dqf-Ma-7vO"/>
+                        <outlet property="value2TextField" destination="7xV-UG-WOG" id="zJ2-sO-NsY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Calc View Controller-->
+        <scene sceneID="KNQ-cw-NMw">
+            <objects>
+                <viewController id="Z3q-7M-8At" customClass="CalcViewController" customModule="bridge_wkwebview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cyR-5A-ie2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uSy-uq-XXe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0b-bG-Sth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1626" y="21"/>
+        </scene>
+    </scenes>
+</document>
